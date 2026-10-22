@@ -2,17 +2,14 @@
 #include <cmath>
 #include <iomanip>
 #include <clocale>
-
 #ifdef _WIN32
 #include <windows.h>
 #endif
 
 using namespace std;
 
-// Настройка консоли для корректного вывода кириллицы
 void setupRussianLocale() {
 #ifdef _WIN32
-    // Устанавливаем кодировку консоли UTF-8 для современных компиляторов Windows
     SetConsoleCP(65001);
     SetConsoleOutputCP(65001);
 #endif
